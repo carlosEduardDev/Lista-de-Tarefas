@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <!-- Arquivo CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>To-doo List</title>
+</head>
+
+<body>
+  <!-- Titulo -->
+  <h1 class="titulo">Lista de Tarefas</h1>
+
+  <!-- Conteudo -->
+  <main class="lista">
+    <!-- Sessão com os inputs que adicionam tarefas -->
+    <section class="form">
+      <input type="text" class="campo__tarefa estilo_padrao bgImgConfig" placeholder="adicione uma tarefa..." maxlength="20" minlength="1">
+      <input type="button" class="botao__adicionar estilo_padrao bgImgConfig">
+    </section>
+
+    <!-- sessão em que são adicionadas todas as tarefas -->
+    <section class="todas-tarefas">
+      <!-- tarefas adicionadas aqui, via javascript -->
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Desenvolvido por carlos<span>Eduardo</span></p>
+    <a href="https://github.com/carlosEduardDev/carlosEduardDev" target="_blank"><img src="img/github.png" alt="GitHub"></a>
+  </footer>
+
+  <!-- Arquivo JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>

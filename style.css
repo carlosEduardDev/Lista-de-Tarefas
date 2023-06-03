@@ -1,0 +1,288 @@
+/* Variáveis */
+
+:root {
+  --primary-color: rgb(5, 5, 5);
+  --text-color: rgb(255, 255, 255);
+  --outline: rgb(53, 48, 48);
+}
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  transition: 0.3s;
+}
+
+/* Estilo padrão para ScrollBar */
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1rem var(--primary-color);
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--outline);
+  border-radius: 1rem;
+}
+
+/* Config. Padrões */
+
+body {
+  background-color: var(--primary-color);
+  height: 100vh;
+  display: grid;
+  gap: 2rem;
+  place-content: center;
+}
+
+.bgImgConfig {
+  background-size: cover;
+  background-size: 1.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.estilo_padrao {
+  background-color: var(--primary-color);
+  padding: 0.3rem 0.9rem;
+  border-radius: 0.25rem;
+  font-size: 1.3rem;
+  min-height: 2.1rem;
+  outline: 0.1rem solid var(--outline);
+  border: none;
+  color: var(--text-color);
+}
+.estilo_padrao:hover {
+  box-shadow: -1px -1px 0px 1px var(--outline);
+}
+
+/* Estilos titulo - H1 */
+
+.titulo {
+  font-size: 2.5em;
+  color: var(--text-color);
+}
+
+/* Estilos conteúdo - Main */
+
+.lista {
+  background-color: rgb(22, 20, 20);
+  padding: 2rem;
+  border-radius: 0.25rem;
+  min-width: 28.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.1rem;
+  outline: 0.1rem solid var(--outline);
+}
+
+/* Sessão com os Inputs */
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Input de digitar tarefa */
+
+.campo__tarefa {
+  min-width: 25rem;
+}
+
+/* Input que adiciona a tarefa */
+
+.botao__adicionar {
+  cursor: pointer;
+  width: 2.2rem;
+  background-size: 1.1rem;
+  background-image: url("./img/add.png");
+}
+
+/* Estilo da tarefa */
+
+.tarefas {
+  display: flex;
+  gap: 0.25rem;
+  margin-right: 0;
+}
+
+/* Estilo do item da tarefa */
+
+.lista__item {
+  min-width: 25rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+  min-width: 100%;
+}
+.lista__item:hover {
+  box-shadow: none;
+}
+
+/* Estilo botão deletar tarefa */
+
+.botao-deletar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-image: url("./img/editar.png");
+}
+.botao-deletar {
+  background-image: url("./img/excluir.png");
+}
+
+/* Estilo da sessão que engloba as tarefas */
+
+.todas-tarefas {
+  font-size: 16px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  max-height: 15.652rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 3;
+  min-width: 100%;
+  padding-right: 0.6rem;
+}
+
+/* Estilo texto da tarefa */
+
+.texto-tarefa {
+  margin: 0 1.3rem;
+}
+
+/* Estilo do texto quando a tarefa for concluída */
+
+.texto-tarefa.concluido {
+  text-decoration: line-through;
+}
+
+/* Animação quando a tarefa é deletada */
+
+@keyframes removido {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Classe com a animação */
+
+.removido {
+  animation: removido 0.5s ease-out 1;
+}
+
+/* Estilo do input de checkar tarefa */
+
+input[type="checkbox"],
+input[type="checkbox"]:checked {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  padding: 0.9rem;
+  border: 0.5px solid var(--outline);
+  border-radius: 0.3rem;
+  appearance: none;
+  background-image: url("#");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  transition: 0.1s;
+}
+/* Estilo do input de checkar tarefa, quando checkado */
+input.checado {
+  background-image: url("./img/check.png") !important;
+}
+
+/* Estilos do rodapé */
+
+footer {
+  position: fixed;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  color: var(--text-color);
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Estilos do texto do rodapé */
+
+footer p {
+  font-size: 1.4rem;
+}
+
+/* Estilos do span do rodapé */
+
+footer span {
+  font-weight: bold;
+  color: #777;
+}
+
+/* Estilos da imagem do rodapé */
+
+footer img {
+  cursor: pointer;
+  filter: invert(100%);
+  width: 30px;
+}
+footer img:hover {
+  filter: invert(60%);
+}
+
+/* Responsivo */
+
+@media (max-width: 500px) {
+  .lista {
+    min-width: 20rem;
+    margin: 0px 1.2rem;
+  }
+
+  .campo__tarefa {
+    min-width: 18rem;
+  }
+
+  .titulo {
+    text-align: center;
+  }
+
+  footer {
+    gap: 1.2rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .lista {
+    padding: 1.2rem;
+    min-width: 17rem;
+  }
+  .campo__tarefa {
+    min-width: 12rem;
+    width: 14rem;
+  }
+  .titulo {
+    font-size: 2rem;
+  }
+}
