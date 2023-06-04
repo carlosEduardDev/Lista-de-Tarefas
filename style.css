@@ -38,6 +38,7 @@ body {
   display: grid;
   gap: 2rem;
   place-content: center;
+  overflow: hidden;
 }
 
 .bgImgConfig {
