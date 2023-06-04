@@ -252,6 +252,10 @@ footer img:hover {
 /* Responsivo */
 
 @media (max-width: 500px) {
+  body {
+    zoom:0.9;
+  }
+  
   .lista {
     min-width: 20rem;
     margin: 0px 1.2rem;
